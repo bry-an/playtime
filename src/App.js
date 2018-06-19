@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class ExplainBindingsComponent extends Component {
-  onLickMe() {
+//this is without the explicit binding in the constructor,
+//which would look like:
+//this.onClickMe = this.onClickMe.bind(this);
+
+  onClickMe = () => {
     console.log(this);
   }
-
   render() {
     return (
-      <botton
+      <button
       onClick={this.onClickMe}
       type="button"
       >
@@ -18,4 +20,4 @@ class ExplainBindingsComponent extends Component {
     );
   }
 }
-export default App;
+export default ExplainBindingsComponent;
